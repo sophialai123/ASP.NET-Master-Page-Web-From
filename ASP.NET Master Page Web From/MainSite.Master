@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainSite.master.cs" Inherits="ASP.NET_Master_Page_Web_From.MainSite" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/Default.css" rel="stylesheet"/>
+</head>
+<body>
+    <%--Only one form tage inside of Master page --%>
+    <form id="form1" runat="server">
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="About.aspx">About</a></li>
+                    <li><a href="Contact.aspx">Contact</a></li>
+                </ul>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <p>&copy; 2022 Sophia's Master Page</p>
+        </footer>
+    </form>
+</body>
+</html>
